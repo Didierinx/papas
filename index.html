@@ -68,8 +68,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: visible;
 }
+
 .corazon::before,
 .corazon::after {
   content: "";
@@ -79,30 +79,36 @@
   background-color: #ff8ba7;
   border-radius: 50%;
 }
+
 .corazon::before {
   top: -125px;
   left: 0;
 }
+
 .corazon::after {
   top: 0;
   left: 125px;
 }
+
 .contenido-corazon {
   position: relative;
   transform: rotate(45deg);
   color: white;
   text-align: center;
-  width: 200px;
+  width: 180px;
   z-index: 2;
 }
+
 .contenido-corazon h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 0.4rem;
 }
+
 .contenido-corazon p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.3rem;
 }
+
 .contenido-corazon button {
   margin-top: 0.6rem;
   background-color: white;
@@ -112,54 +118,48 @@
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
+/* 🌐 RESPONSIVE */
+@media (max-width: 500px) {
+  .corazon {
+    width: 180px;
+    height: 160px;
+  }
 
-    .brillos {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .brillo {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: flotar 10s linear infinite;
-    }
-    @keyframes flotar {
-      0% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-120vh);
-        opacity: 0;
-      }
-    }
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-        background: linear-gradient(to bottom, #b8d8f8 50%, #fbd2e0 50%);
-      }
-      .lado {
-        width: 100%;
-        height: auto;
-        padding: 1.5rem;
-      }
-      .corazon {
-        position: relative;
-        transform: rotate(-45deg);
-        margin: 2rem auto;
-      }
-    }
+  .corazon::before,
+  .corazon::after {
+    width: 180px;
+    height: 160px;
+  }
+
+  .corazon::before {
+    top: -90px;
+  }
+
+  .corazon::after {
+    left: 90px;
+  }
+
+  .contenido-corazon {
+    width: 140px;
+  }
+
+  .contenido-corazon h2 {
+    font-size: 1rem;
+  }
+
+  .contenido-corazon p {
+    font-size: 0.8rem;
+  }
+
+  .contenido-corazon button {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
   </style>
 </head>
 <body>
